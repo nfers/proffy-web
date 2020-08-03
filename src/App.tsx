@@ -1,8 +1,11 @@
 import React from 'react';
+import './styles/global.css';
+import Landing from './pages/Landing'
+
 
 function App() {
   return (
-    <h1>Proffy- Plataforma de Estudos On-line</h1>
+    <Landing />
   );
 }
 
