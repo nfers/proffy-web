@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
   body, input, button, textarea {
     
     font: 500 1.6rem Poppins;
+    
   }
 `;
 
