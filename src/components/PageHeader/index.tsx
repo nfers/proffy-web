@@ -7,7 +7,7 @@ interface PageHeaderProps {
   title: string;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = (props) => {
+const PageHeader: React.FC<PageHeaderProps> = ({ title, children }) => {
   return (
     <header className="page-header">
       <div className="top-bar-container">
@@ -19,7 +19,8 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
 
       <div className="header-content">
         {/* <strong> {Estes são os Proffys disponíveis}</strong> */}
-        <strong>{props.title}</strong>
+        <strong>{title}</strong>
+        {children}
       </div>
     </header>
   );
