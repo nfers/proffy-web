@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
-import './global.css'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   font-size: 60%;
@@ -33,6 +32,5 @@ const GlobalStyle = createGlobalStyle`
     font: 500 1.6rem Poppins;
   }
 `;
-
 
 export default GlobalStyle;

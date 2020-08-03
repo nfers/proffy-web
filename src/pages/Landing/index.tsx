@@ -4,9 +4,9 @@ import landingImg from '../../images/landing.svg';
 import studyIcon from '../../images/icons/study.svg'
 import giveClasses from '../../images/icons/give-classes.svg'
 import purpleHeart from '../../images/icons/purple-heart.svg'
-import './styles.css';
+import './style.css';
 
-const Landing: React.FC = () => {
+function Landing() {
   return (
     <div id="page-landing">
       <div id="page-landing-content" className="container">
@@ -22,8 +22,8 @@ const Landing: React.FC = () => {
           Estudar
         </a>
         <a href="" className="give-classes">
-          <img src={giveClasses} alt="estudar" />
-          Estudar
+          <img src={giveClasses} alt="dar Aulas" />
+          Dar Aulas
         </a>
       </div>
 
@@ -33,6 +33,5 @@ const Landing: React.FC = () => {
     </div>
   )
 }
-
 
 export default Landing;
