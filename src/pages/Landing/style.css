@@ -133,7 +133,7 @@
 
 .buttons-container {
   grid-area: buttons;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
 .buttons-container a {
