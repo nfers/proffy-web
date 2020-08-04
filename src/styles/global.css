@@ -1,5 +1,5 @@
 :root {
-  font-size: 40%;
+  font-size: 60%;
 
   --color-background: #F0F0F7;
   --color-primary-lighter: #9871F5;
@@ -27,13 +27,11 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
+html, body, #root{
   height: 100vh;
 }
 
-body {
+body{
   background: var(--color-background);
 }
 
@@ -43,21 +41,19 @@ body {
   justify-content: center;
 }
 
-body,
-input,
-button,
-textarea {
+body, input, button, textarea {
   font: 500 1.6rem Poppins;
-  color: var(--color-text-base);
+  color: var(--color-text-base)
 }
+
 
 .container {
   width: 90vw;
   max-width: 700px;
 }
 
-@media(min-width: 700px) {
-  :root {
+@media (min-width: 700px){
+  :root{
     font-size: 62.5%;
   }
 }
