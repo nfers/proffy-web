@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.svg";
-import landingImg from "../../images/landing.svg";
-import studyIcon from "../../images/icons/study.svg";
 import giveClassesIcon from "../../images/icons/give-classes.svg";
 import purpleHeart from "../../images/icons/purple-heart.svg";
+import studyIcon from "../../images/icons/study.svg";
+import postsIcon from "../../images/icons/support.svg";
+import landingImg from "../../images/landing.svg";
+import logo from "../../images/logo.svg";
 import api from "../../services/api";
 import "./style.css";
 
@@ -47,6 +48,10 @@ function Landing() {
           <Link to="/give-classes" className="give-classes">
             <img src={giveClassesIcon} alt="dar aulas" />
             Dar Aulas
+          </Link>
+          <Link to="/posts" className="study">
+            <img src={postsIcon} alt="Comentários" />
+            Posts
           </Link>
         </div>
 

@@ -93,7 +93,7 @@
     max-width: 900px;
 
     display: grid;
-    grid-template-rows: 350px 1fr;
+    grid-template-rows: 250px 1fr;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas:
       "logo hero hero"
@@ -129,14 +129,18 @@
 
   .buttons-container a {
     font-size: 2.4rem;
+    margin-left: 1.5rem;
   }
 
   .buttons-container a img {
     margin-right: 2.4rem;
+
   }
 
   .total-connections {
     grid-area: total;
     justify-self: end;
+    margin: 5rem;
+
   }
 }

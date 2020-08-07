@@ -1,0 +1,45 @@
+#page-posts {
+  width: 100vw;
+  height: 100vh;
+}
+
+#page-posts .page-header .header-content {
+  margin-bottom: 6.4rem;
+}
+
+#page-posts main {
+  background: var(--color-box-base);
+  width: 100%;
+  max-width: 74rem;
+  border-radius: 0.8rem;
+  margin: -3.2rem auto 3.2rem;
+  padding-top: 6.4rem;
+  overflow: hidden;
+}
+
+#page-posts main p {
+  text-align: center;
+  margin-block-end: 20rem;
+}
+
+@media (min-width: 700px) {
+  .page-header {
+    height: 340px;
+  }
+
+  #page-posts {
+    max-width: 100vw;
+  }
+
+  #page-posts-form .page-header .header-content {
+    margin-bottom: 0;
+  }
+
+
+
+
+
+
+
+
+}
