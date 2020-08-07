@@ -1,19 +1,29 @@
-import React from "react";
-import TeacherItem from "../../components/TeacherItem";
-import PageHeader from "../../components/PageHeader";
+import React, { FormEvent, useState } from "react";
 import Input from "../../components/Input";
+import PageHeader from "../../components/PageHeader";
 import Select from "../../components/Select";
+import TeacherItem from "../../components/TeacherItem";
 import "./styles.css";
 
 function TeacherList() {
+  const [subject, setSubject] = useState("");
+  const [week_day, setWeek_day] = useState("");
+  const [time, setTime] = useState("");
+
+  function searchTeachers(e: FormEvent) {
+    e.preventDefault();
+  }
   return (
     <div id="page-teacher-list" className="container">
       <PageHeader title="Estes são os Proffys disponíveis">
-        <form id="search-teachers">
-          <Input name="subject" label="Matéria" />
+        <form id="search-teachers" onSubmit={searchTeachers}>
           <Select
             name="subject"
             label="Matéria"
+            value={subject}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
             options={[
               { value: "Artes", label: "Arte" },
               { value: "Matemática", label: "Matemática" },
@@ -29,6 +39,10 @@ function TeacherList() {
           <Select
             name="week_day"
             label="Dia da semana"
+            value={week_day}
+            onChange={(e) => {
+              setWeek_day(e.target.value);
+            }}
             options={[
               { value: "0", label: "Domingo" },
               { value: "2", label: "Segunda-Feira" },
@@ -39,8 +53,15 @@ function TeacherList() {
               { value: "5", label: "Sabado" },
             ]}
           />
-          <Input name="week_day" label="Dia da semana" />
-          <Input type="time" name="time" label="Hora" />
+          <Input
+            type="time"
+            name="time"
+            label="Hora"
+            value={time}
+            onChange={(e) => {
+              setTime(e.target.value);
+            }}
+          />
         </form>
       </PageHeader>
       <main>

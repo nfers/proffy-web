@@ -51,6 +51,11 @@
     max-width: 100vw;
   }
 
+  #search-teachers .select-block select {
+    background: var(--color-input-background);
+    color: var(--color-text-base);
+  }
+
   #search-teachers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
