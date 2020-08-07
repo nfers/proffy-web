@@ -96,8 +96,9 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin-top: 3.2rem;
 
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
 #page-teacher-form main footer button:hover {

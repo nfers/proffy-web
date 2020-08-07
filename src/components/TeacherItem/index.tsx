@@ -1,33 +1,56 @@
 import React from "react";
 import wppIcon from "../../images/icons/whatsapp.svg";
+import api from "../../services/api";
 import "./styles.css";
 
-function TeacherItem() {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+  favorited?: boolean;
+}
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+  function createNewConnection() {
+    api.post("connections", {
+      user_id: teacher.id,
+    });
+  }
   return (
     <article className="teacher-item">
       <header>
-        <img
-          src="https://lh3.googleusercontent.com/ogw/ADGmqu-zQ3VvJKgtBvIObfo-R8JldPeOo6CpjZalOKN6=s83-c-mo"
-          alt="Nayara Ferreira"
-        />
+        <img src={teacher.avatar} alt={teacher.name} />
         <div>
-          <strong>Nayara Ferreira</strong>
-          <span>Matemática</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
-      <p>Curte ensinar os cálculos da vida. Especialiste em regra de 3</p>
+      <p>{teacher.bio}</p>
       <footer>
         <p>
           Preço/Hora
-          <strong>R$ 120,00</strong>
+          <strong>R$ {teacher.cost}</strong>
         </p>
-        <button type="button">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={`https://wa.me/${teacher.whatsapp}/text:oii`}
+          type="button"
+          onClick={createNewConnection}
+        >
           <img src={wppIcon} alt="whattsapp" />
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   );
-}
+};
 
 export default TeacherItem;
